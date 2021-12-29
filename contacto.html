@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+    <style type="text/css">
+       .masthead {
+        height: 50vh;
+        min-height: 500px;
+        background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+        /*formulario 01*/
+        .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+        }
+        .bigicon {
+            font-size: 35px;
+            color: #36A0FF;
+        }
+/*----------------------- */    
+ 
+        .form-group{
+            margin-left: 25%;
+        }
+        #cajita{
+            margin-right:60%;
+            margin-left: 40%;
+            margin-top: 5%;
+        }
+
+    </style>
+
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="tienda.html">Cancelar compra</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" link href="https://es.wikipedia.org/wiki/Tenis#:~:text=El%20tenis%20es%20un%20deporte,aguantar%20peloteos%20largos%20o%20fuertes." target="blank">Tenis wiki</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" link href="https://es.wikipedia.org/wiki/Tenis#:~:text=El%20tenis%20es%20un%20deporte,aguantar%20peloteos%20largos%20o%20fuertes." target="blank">FAQ reglas tenis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Pagina completa de encabezado con centrado vertical -->
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="fw-light">Sitio de compra</h1>
+                        <p>Favor llenar los datos de forma apropiada gestionar rapidamente su compra</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center header">Contactenos </legend>
+                            
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="name" name="name" type="text" placeholder="Nombre y Apellido" class="form-control" autofocus required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="lname" name="rut" type="text" placeholder="Rut" class="form-control" maxlength="10" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="Address" name="address" type="text" placeholder="Direccion" class="form-control" required>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="email" name="email" type="text" placeholder="Correo" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="phone" name="phone" type="number" placeholder="Telefono" class="form-control" required>
+                                    </div>
+                                </div>
+
+                             
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="item" name="item" type="text" placeholder="Ingrese nombre del producto a comprar" class="form-control" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="cantidad" name="quantity" type="text" value="Elija la cantidad de articulos que comprara usando la barra selectora lateral maximo 10" class="form-control" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="otros" name="cantidad" type="number" placeholder="Cantidad de articulos" class="form-control" min="1" max="10" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="name" name="birthdate" type="text" value="Elija el color de su articulo (opcional)" class="form-control" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="otros" name="cantidad" type="color"class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="name" name="birthdate" type="text" value="Fecha de nacimiento" class="form-control" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="date" name="date" type="date" class="form-control" required>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Ingresa alguna observacion sobre tu pedido que quieras hacer (opcional)" rows="7"></textarea>
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise con llamado de pagina externa</title>
+</head>
+<body>
+        
+    
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script type="text/javascript">
+
+setTimeout(gato, 3000)
+       
+function gato() {
+    
+
+    function interface(some) {
+            document.getElementById("demo").innerHTML=some;
+        }
+
+    function interface2(hola) {
+            document.getElementById("demo2").innerHTML=hola;
+        }
+        let promesa=new Promise(function (myResolve,myReject) {
+            let req= new XMLHttpRequest();
+            req.open('GET','contacto.html')
+            req.onload=function(){
+               if (req.status==200){
+                   myResolve(req.response);
+               }else{
+                   myReject("error de archivo no encontrado");
+               }
+            }
+            req.send();
+        })
+        let promesa2=new Promise(function (myResolve,myReject) {
+            let req= new XMLHttpRequest();
+            req.open('GET','tarea.html')
+            req.onload=function(){
+               if (req.status==200){
+                   myResolve(req.response);
+               }else{
+                   myReject("error de archivo no encontrado");
+               }
+            }
+            req.send();
+        })
+        promesa.then(
+            function(value){
+                interface(value)
+            },
+            function(error) {
+                interface(error)
+            }
+        )
+        promesa2.then(
+            function(value){
+                interface2(value)
+            },
+            function(error) {
+                interface2(error)
+            }
+        )
+
+}      
+    </script>
+</body>
+</html>
